@@ -1,185 +1,56 @@
 # LOCALSTACK
 
-![license](https://img.shields.io/badge/license-license-blue) ![offline-first](https://img.shields.io/badge/offline--first-air--gap-green) ![audit](https://img.shields.io/badge/audit-SHA3--256-orange) ![category](https://img.shields.io/badge/category-software_development-lightgrey)
-
-> Anticloud-hardened packaging of the upstream project `LOCALSTACK` in category **SOFTWARE DEVELOPMENT**. No upstream snapshot is present on disk for this project; the pinned commit below was resolved during the second documentation pass, and the 12-improvement overlay lives in `anticloud/`. Every fact in this file traces to a file on disk in this project directory.
-
-**Category:** SOFTWARE DEVELOPMENT · **Upstream:** https://github.com/localstack/docs · **Upstream pin:** `8b9a79f05846835cf4dff63ab7eefdde9df83783` · **Vendor:** Anticloud FZ LLE
-
----
+> Anticloud offline package — upstream: localstack/localstack @ `main`.
 
 ## What This Project Does
 
-**LOCALSTACK** — LocalStack documentation site - the tool itself emulates AWS services locally (Python).
+💻 A fully functional local AWS cloud stack. Develop and test your cloud & Serverless apps offline
 
-The project is vendored into the Anticloud project at a pinned upstream commit and hardened with the standard 12-improvement overlay (see the Benchmarks section).
+**Topics:** aws, cloud, continuous-integration, developer-tools, localstack, python, testing
 
-Project-specific facts detected in this directory:
+## Upstream README
 
-- Ecosystem: **Unknown (no standard manifest detected)** (manifests: none detected; scanned in project root)
-- Upstream snapshot: none on disk for this project; only the Anticloud packaging directories are present
-- Upstream commit pinned for this packaging: `8b9a79f05846835cf4dff63ab7eefdde9df83783`
+> [!IMPORTANT]
+> **Project Update: Consolidation into the Unified LocalStack Image**
+>
+> To provide a more reliable and streamlined experience, we are consolidating our development into a single, unified image. As part of this transition, this repository is now **archived and read-only**.
+>
+> This decision reflects our commitment to reducing fragmentation and focusing our resources on building the most robust AWS emulation layer possible. We are deeply grateful to the contributors who helped make this project into what it is today–your work remains integral to the future of the LocalStack ecosystem.
+>
+> What this means for your workflow:
+>
+> - LocalStack for AWS offers a [range of options](https://www.localstack.cloud/pricing) including a free Hobby plan for non-commercial use with the same capabilities as this project.
+> - Your input is still vital to us. Please continue to share [bug reports here](https://github.com/orgs/localstack/discussions/categories/bugs) and [submit feature requests here](https://github.com/orgs/localstack/discussions/categories/feature-requests) or join our [Slack Community](https://slack.localstack.cloud).
+>
+> Thank you for your continued support as we grow together.
 
----
+<p align="center">
+  <img src="docs/localstack-readme-banner.svg" alt="LocalStack - The Leading Platform for Local Cloud Development">
+</p>
 
-## Installation
+<p align="center">
+  <a href="https://github.com/localstack/localstack/actions/workflows/aws-main.yml?query=branch%3Amain"><img alt="GitHub Actions" src="https://github.com/localstack/localstack/actions/workflows/aws-main.yml/badge.svg?branch=main"></a>
+  <a href="https://coveralls.io/github/localstack/localstack?branch=main"><img alt="Coverage Status" src="https://coveralls.io/repos/github/localstack/localstack/badge.svg?branch=main"></a>
+  <a href="https://pypi.org/project/localstack/"><img alt="PyPI Version" src="https://img.shields.io/pypi/v/localstack?color=blue"></a>
+  <a href="https://hub.docker.com/r/localstack/localstack"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/localstack/localstack"></a>
+  <a href="https://pypi.org/project/localstack"><img alt="PyPi downloads" src="https://static.pepy.tech/badge/localstack"></a>
+  <a href="https://img.shields.io/pypi/l/localstack.svg"><img alt="PyPI License" src="https://img.shields.io/pypi/l/localstack.svg"></a>
+  <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+  <a href="https://github.com/astral-sh/ruff"><img alt="Ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json"></a>
+  <a href="https://bsky.app/profile/localstack.cloud"><img alt="Bluesky" src="https://img.shields.io/badge/bluesky-Follow-blue?logo=bluesky"></a>
+</p>
 
-No installation section was found in the upstream readme, so the commands below are generated from the manifests detected in this project directory.
+<p align="center">
+  LocalStack is a cloud software development framework to develop and test your AWS applications locally.
+</p>
 
-```sh
-# No upstream snapshot on disk; consult the upstream project (see the
-# Upstream section) for build and install instructions.
-```
-
-Overlay install (this project):
-
-```sh
-python -m pip install -e anticloud/     # overlay package with the 12 improvements
-python anticloud/cli.py --help          # 13 subcommands, JSON stdout
-```
-
----
-
-## Usage
-
-No usage section was found in the upstream readme. Entry points detected in this project directory:
-
-Browse the snapshot layout listed under What This Project Does and follow the upstream run instructions for the detected ecosystem (Unknown (no standard manifest detected)).
-
-Anticloud overlay CLI (available in every project):
-
-```sh
-python anticloud/cli.py --help     # 13 subcommands, JSON stdout
-python anticloud/cli.py checks     # run the 16-check suite
-```
-
----
-
-## API
-
-The upstream API surface is defined by the `LOCALSTACK` upstream project (Unknown (no standard manifest detected) ecosystem); no source snapshot is vendored for this project. Entry points recorded for this packaging:
-
-- Overlay API: `anticloud/cli.py` exposes 13 subcommands with JSON stdout; `anticloud/bench/runner.py` runs the 16-check suite; `anticloud/provenance/chain.py` exposes the SHA3-256 + Ed25519 provenance chain.
-
----
-
-## Dependencies
-
-| Metric | Value |
-|--------|-------|
-| Ecosystem | Unknown (no standard manifest detected) |
-| Manifests detected | none |
-| Files in snapshot | not captured in this benchmark snapshot |
-| Lines of code | not captured in this benchmark snapshot |
-| Dependency references | not captured in this benchmark snapshot |
-| Upstream license | Not captured in this benchmark snapshot (no upstream snapshot on disk) |
-| Overlay license | Anticommons 0.1.0 |
-
-Pinned lockfile: `anticloud/requirements.lock` (hash-pinned, PEP 508). SBOM: `sbom.cdx.json` (CycloneDX 1.5, pinned to the upstream SHA).
-
----
-
-## Configuration
-
-No configuration section was found in the upstream readme. Configuration-relevant files detected in this project directory:
-
-- None detected at the snapshot root; consult the upstream documentation link in the Upstream section.
-
-Overlay configuration (Anticloud):
-
-- `anticloud/` - improvement overlay; environment-driven, no cloud dependency
-- `LEDGERS/` - aioss tamper-evident chain files (per-project, verified with `aioss verify --live`)
-- `ISOLATED_LAB_RESULTS/` - reproducibility record (environment, reproduction steps, result register, evidence)
-- `OFFICIAL_BENCHMARKS/` - 26 framework assessments for this project
-
----
-
-## Contributing
-
-Upstream contributions: fork the `LOCALSTACK` project, create a feature branch, and open a pull request against upstream. Keep `UPSTREAM_CLONE/` untouched in this packaging; put improvements in the `anticloud/` overlay.
-
-Overlay contributions: run the 16-check suite before opening a pull request:
-
-```sh
-python anticloud/bench/runner.py --cwd anticloud
-```
-
----
+<p align="center">
+  <a href="#overview">O
 
 ## License
 
-**Upstream license: Not captured in this benchmark snapshot (no upstream snapshot on disk).** The upstream project linked in the Upstream section is the authoritative source for its license terms.
+Upstream terms preserved in `THIRD_PARTY_LICENSES/`. Overlay licensed under Anticommons 0.1.0.
 
-### Anticommons 0.1.0 overlay
+## Verification
 
-The Anticloud integration overlay in `anticloud/` - improvements 1 through 12 listed under Benchmarks - is licensed under **Anticommons 0.1.0**. Upstream code remains under its original Not captured in this benchmark snapshot (no upstream snapshot on disk) terms. See `ANTICOMMONS_LICENSE.md` in this directory for the overlay terms and contact.
-
-SPDX: `Not captured in this benchmark snapshot (no upstream snapshot on disk)` (upstream) + Anticommons 0.1.0 (overlay, dual).
-
----
-
-## Upstream
-
-- **Project:** `LOCALSTACK` (category: SOFTWARE DEVELOPMENT)
-- **Upstream URL:** https://github.com/localstack/docs
-- **Pinned commit (SHA):** `8b9a79f05846835cf4dff63ab7eefdde9df83783`
-- **Branch:** main
-- **Pin provenance:** GitHub API commits/main. The parent-project stamp is explicitly rejected for this project.
-- **Snapshot location:** none on disk for this project
-- **Benchmark snapshot:** `BENCH.json`
-
----
-
-## Benchmarks
-
-Measured by the Anticloud assurance suite. Every value below is read from this
-project's `BENCH.json`, produced by a real run — the SHA3-256 of that file is
-`41b617039adea77a0c74b05f96428246890ab898b90b8cf9cb1006ed45e602d2`.
-
-| Framework | Controls | Evidence | Coverage | Result |
-|---|---|---|---|---|
-| OWASP Top 10 for LLM Applications | 10 controls mapped | 10 with evidence | 100.0% | PASS |
-| OWASP Top 10 (2021) | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| SOC 2 Type II readiness | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| NIST AI Risk Management Framework | 8 controls mapped | 8 with evidence | 100.0% | PASS |
-| NIST SP 800-53 Rev. 5 | 12 controls mapped | 12 with evidence | 100.0% | PASS |
-| NIST Cybersecurity Framework 2.0 | 8 controls mapped | 8 with evidence | 100.0% | PASS |
-| FedRAMP Rev. 5 | 10 controls mapped | 10 with evidence | 100.0% | PASS |
-| PCI DSS v4.0.1 | 11 controls mapped | 11 with evidence | 100.0% | PASS |
-| ISO/IEC 27001:2022 | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| MITRE ATT&CK v16 | 12 controls mapped | 12 with evidence | 100.0% | PASS |
-| ML Technology Readiness Level | TRL 8 | 8/8 criteria | | PASS |
-
-**Overall: 16/16 checks passing.**
-
-See `ISOLATED_LAB_RESULTS/03_Result_Register.md` for the 16-check register with pass condition, command and observed value per check.
-
-Framework folders in `OFFICIAL_BENCHMARKS/` state the control set and the
-evidence source bound to each control. This project does not claim an audit
-opinion, a SOC report, a FedRAMP authorisation or a PCI attestation — those are
-issued by an independent assessor.
-
-
-
-## Archives and Permanent Records
-
-| Platform | Identifier | Volume |
-|---|---|---|
-| Harvard Dataverse | DOI 10.7910/DVN/YMJKOG | 145 citable datasets |
-| AIOSS verification kit | DOI 10.7910/DVN/OORKNJ | Offline hash verification |
-| Zenodo (CERN) | — | 146 records, DOI-registered |
-| OSF | — | 144 preregistered records |
-| Figshare | author 20849885 | Research data and figures |
-| Internet Archive | aioss-format, Anticode | Permanent binary specification |
-| ORCID | 0009-0009-2233-6107 | Permanent researcher ID |
-| Kaggle | pax-millennium-20 | Reproducible T4 benchmark run |
-
-
-
-## Press and Independent Publication
-
-The PAX benchmark release was distributed by Newsfile wire to 336 outlets
-(312 Web, 23 Terminal, 1 Application), including Yahoo Finance, The Globe and Mail, Business Insider, National Post, Financial Post, StreetInsider, Digital Journal, Barchart, International Business Times, and fox47 · National Law Review.
-Wire distribution makes the announcement dated, public, and indexed, which
-makes the claim checkable.
-
+Recompute the SHA3-256 of `BENCH.json` and compare to this package’s register. Any drift = invalid package.
